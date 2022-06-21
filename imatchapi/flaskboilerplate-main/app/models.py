@@ -45,9 +45,7 @@ class iMatch:
         for img in imgs:
             igm =  self.downloadimg(img)
             pixels =face_recognition.load_image_file(igm)
-            oscmd = f'del {igm}'
-            os.system(oscmd)
-         
+            os.remove(igm)
 
             box.append(pixels)
         return box
@@ -77,6 +75,8 @@ class iMatch:
 class iMatchApi(iMatch):
     def __init__(self,url1,url2):
         rgb =self.getimgrb([url1,url2])
-        print(self.ismatch(rgb))
-
+        self.ans = self.ismatch(rgb)
+        print(self.ans)
+    def imatch(self):
+        return self.ans[0]
 #iMatchApi('https://media-cldnry.s-nbcnews.com/image/upload/rockcms/2022-06/220610-donald-trump-2020-ac-432p-5730d1.jpg','https://media-cldnry.s-nbcnews.com/image/upload/rockcms/2022-06/220610-donald-trump-2020-ac-432p-5730d1.jpg')
