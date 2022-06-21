@@ -78,5 +78,5 @@ class iMatchApi(iMatch):
         self.ans = self.ismatch(rgb)
         print(self.ans)
     def imatch(self):
-        return self.ans[0]
+        return str(self.ans[0])
 #iMatchApi('https://media-cldnry.s-nbcnews.com/image/upload/rockcms/2022-06/220610-donald-trump-2020-ac-432p-5730d1.jpg','https://media-cldnry.s-nbcnews.com/image/upload/rockcms/2022-06/220610-donald-trump-2020-ac-432p-5730d1.jpg')
