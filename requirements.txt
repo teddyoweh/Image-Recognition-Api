@@ -1,0 +1,4 @@
+gunicorn
+textblob
+flask
+face_recognition
