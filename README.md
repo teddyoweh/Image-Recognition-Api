@@ -1,2 +1,2 @@
-# flaskboilerplate
-  Flask API boilerplate
+# Image Recognition API
+- still in development
